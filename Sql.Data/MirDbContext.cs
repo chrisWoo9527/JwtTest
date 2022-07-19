@@ -6,6 +6,8 @@ namespace Identity.Sql.Data
 {
     public class MirDbContext : IdentityDbContext<User, Role, long>
     {
+        public DbSet<UserSomething> UserSomethings { get; set; }
+
         public MirDbContext(DbContextOptions<MirDbContext> options) : base(options)
         {
         }
